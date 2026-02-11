@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Help Center | WebBuyers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html, body {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow-x: hidden;
+      }
+
+      html::-webkit-scrollbar,
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      img,
+      svg,
+      video,
+      canvas,
+      iframe {
+        max-width: 100%;
+        height: auto;
+      }
+
+      @media (max-width: 640px) {
+        .p-12,
+        .p-10,
+        .p-8 {
+          padding: 1.25rem !important;
+        }
+
+        .text-4xl {
+          font-size: 1.875rem !important;
+          line-height: 2.25rem !important;
+        }
+
+        .text-3xl {
+          font-size: 1.5rem !important;
+          line-height: 2rem !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-blue-950 via-blue-800 to-indigo-950 text-white pt-20 overflow-x-hidden">
+    <div id="site-header"></div>
+
+    <main class="mx-auto max-w-6xl px-4 sm:px-6 py-12">
+      <section class="rounded-2xl p-8">
+        <p class="text-sm uppercase tracking-wider text-blue-100">Support</p>
+        <h1 class="mt-2 text-4xl font-bold">Help Center</h1>
+        <p class="mt-3 text-blue-100">
+          Get support for project setup, delivery queries, payment issues, and customization requests.
+        </p>
+      </section>
+
+      <section class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-xl border border-white/20 bg-white/5 p-6">
+          <h2 class="text-xl font-semibold">Project Setup Help</h2>
+          <p class="mt-3 text-sm text-blue-100">
+            Need help installing or running your project? Share your issue details and our team will guide you step by step.
+          </p>
+        </article>
+
+        <article class="rounded-xl border border-white/20 bg-white/5 p-6">
+          <h2 class="text-xl font-semibold">Order & Delivery</h2>
+          <p class="mt-3 text-sm text-blue-100">
+            Track your delivery status, expected completion time, and handover updates for ready-made and custom projects.
+          </p>
+        </article>
+
+        <article class="rounded-xl border border-white/20 bg-white/5 p-6">
+          <h2 class="text-xl font-semibold">Payment Support</h2>
+          <p class="mt-3 text-sm text-blue-100">
+            Facing payment confirmation or invoice issues? Contact support with transaction details for quick resolution.
+          </p>
+        </article>
+
+        <article class="rounded-xl border border-white/20 bg-white/5 p-6">
+          <h2 class="text-xl font-semibold">Customization Requests</h2>
+          <p class="mt-3 text-sm text-blue-100">
+            Request design changes, extra features, integrations, or dashboard updates based on your business needs.
+          </p>
+        </article>
+
+        <article class="rounded-xl border border-white/20 bg-white/5 p-6">
+          <h2 class="text-xl font-semibold">Technical Issues</h2>
+          <p class="mt-3 text-sm text-blue-100">
+            Report bugs, deployment errors, or server issues. Include screenshots and logs for faster troubleshooting.
+          </p>
+        </article>
+
+        <article class="rounded-xl border border-white/20 bg-white/5 p-6">
+          <h2 class="text-xl font-semibold">General Queries</h2>
+          <p class="mt-3 text-sm text-blue-100">
+            For pricing, service details, and consultation, reach out to our support team anytime through contact form.
+          </p>
+        </article>
+      </section>
+
+      <section class="mt-12 rounded-2xl border border-white/20 bg-white/5 p-8">
+        <h2 class="text-2xl font-semibold">How To Get Fast Support</h2>
+        <div class="mt-5 grid gap-4 md:grid-cols-3">
+          <div class="rounded-lg border border-white/20 p-4">
+            <h3 class="font-semibold">1. Share Details</h3>
+            <p class="mt-2 text-sm text-blue-100">Include project name, issue type, and expected outcome.</p>
+          </div>
+          <div class="rounded-lg border border-white/20 p-4">
+            <h3 class="font-semibold">2. Attach Proof</h3>
+            <p class="mt-2 text-sm text-blue-100">Add screenshots, error messages, and reference links if available.</p>
+          </div>
+          <div class="rounded-lg border border-white/20 p-4">
+            <h3 class="font-semibold">3. Get Resolution</h3>
+            <p class="mt-2 text-sm text-blue-100">Our team will review and reply with the best possible solution.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-12 rounded-2xl border border-white/20 bg-white/5 p-8 text-center">
+        <h2 class="text-2xl font-semibold">Still Need Help?</h2>
+        <p class="mt-3 text-blue-100">Contact our team directly and we will respond as quickly as possible.</p>
+        <a
+          href="contact.html"
+          class="mt-6 inline-block rounded-lg bg-white px-5 py-3 text-sm font-semibold text-blue-900"
+        >
+          Contact Support
+        </a>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script>
+      fetch("app.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const doc = new DOMParser().parseFromString(html, "text/html");
+          const header = doc.querySelector("header");
+          const footer = doc.querySelector("footer");
+          if (header) document.getElementById("site-header").appendChild(header);
+          if (footer) document.getElementById("site-footer").appendChild(footer);
+
+          const current = location.pathname.split("/").pop() || "home.html";
+          document
+            .querySelectorAll("nav a")
+            .forEach((a) => a.classList.toggle("text-emerald-700", a.getAttribute("href") === current));
+
+          const btn = document.getElementById("mobile-menu-btn");
+          const menu = document.getElementById("mobile-menu");
+          if (btn && menu) {
+            btn.addEventListener("click", () => {
+              const isHidden = menu.classList.toggle("hidden");
+              btn.setAttribute("aria-expanded", String(!isHidden));
+            });
+          }
+        });
+    </script>
+  <script>
+  (function () {
+    if (document.getElementById("visit-counter")) return;
+
+    const counter = document.createElement("div");
+    counter.id = "visit-counter";
+    counter.className = "fixed right-4 top-28 z-[60] rounded-lg border border-white/30 bg-gradient-to-r from-blue-950 via-blue-800 to-indigo-950 px-4 py-2 text-sm font-semibold text-white shadow-lg backdrop-blur";
+    counter.innerHTML = 'Views: <span id="visit-count">..</span>';
+    document.body.appendChild(counter);
+
+    const visitCountEl = document.getElementById("visit-count");
+    fetch(`https://mail-sender-cyan.vercel.app/api/visit?_=${Date.now()}`, { cache: "no-store" })
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to load visits");
+        return res.json();
+      })
+      .then((data) => {
+        const visits = Number(data?.visits);
+        visitCountEl.textContent = Number.isFinite(visits) ? String(visits) : "0";
+      })
+      .catch(() => {
+        visitCountEl.textContent = "0";
+      });
+  })();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
